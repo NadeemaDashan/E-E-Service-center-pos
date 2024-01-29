@@ -15,6 +15,8 @@ public class AppInitializer extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../../view/DashBoardForm.fxml"))));
+        stage.centerOnScreen();
+        stage.setResizable(false);
         stage.show();
     }
 }
