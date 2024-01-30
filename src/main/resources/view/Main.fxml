@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="pane" prefHeight="524.0" prefWidth="729.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <ImageView fitHeight="752.0" fitWidth="938.0" layoutX="-16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../Downloads/istockphoto-584570730-612x612.jpg" />
+         </image>
+         <effect>
+            <BoxBlur height="8.02" iterations="3" width="8.02" />
+         </effect>
+      </ImageView>
+      <Button layoutX="222.0" layoutY="63.0" mnemonicParsing="false" onAction="#btnCustomerActionPerformed" prefHeight="76.0" prefWidth="288.0" style="-fx-background-color: green;" text="Customers" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="224.0" layoutY="196.0" mnemonicParsing="false" onAction="#btnItemsActionPerformed" prefHeight="76.0" prefWidth="288.0" style="-fx-background-color: green;" text="Items" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="225.0" layoutY="337.0" mnemonicParsing="false" onAction="#btnPlaceOrderActionPerformed" prefHeight="76.0" prefWidth="288.0" style="-fx-background-color: green;" text="Place Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="227.0" layoutY="474.0" mnemonicParsing="false" onAction="#btnOrderActionPerformed" prefHeight="76.0" prefWidth="288.0" style="-fx-background-color: green;" text="Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="228.0" layoutY="617.0" mnemonicParsing="false" onAction="#btnReportsActionPerformed" prefHeight="76.0" prefWidth="288.0" style="-fx-border-radius: 10%; -fx-background-color: green;" text="Reports" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

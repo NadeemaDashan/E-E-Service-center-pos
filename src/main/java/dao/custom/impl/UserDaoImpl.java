@@ -7,6 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public class UserDaoImpl implements UserDao {
     @Override
@@ -32,5 +33,25 @@ public class UserDaoImpl implements UserDao {
         Long count = (Long) session.createQuery("SELECT COUNT(*) FROM Users WHERE email = :userEmail").setParameter("userEmail", userEmail)
                 .uniqueResult();
         return count>0;
+    }
+
+    @Override
+    public boolean save(Users entity) throws SQLException, ClassNotFoundException {
+        return false;
+    }
+
+    @Override
+    public boolean update(Users entity) throws SQLException, ClassNotFoundException {
+        return false;
+    }
+
+    @Override
+    public boolean delete(String value) throws SQLException, ClassNotFoundException {
+        return false;
+    }
+
+    @Override
+    public List getAll() throws SQLException, ClassNotFoundException {
+        return null;
     }
 }

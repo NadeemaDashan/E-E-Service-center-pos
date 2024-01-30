@@ -70,14 +70,14 @@ public class DashBoardController {
         String userPassword=txtPassword.getText();
 
         if ((usersBo.doesUserExist(userEmail) && usersBo.isUserCredentialsValid(userEmail, userPassword))) {
-            new Alert(Alert.AlertType.CONFIRMATION, "User Login successful").show();
             clearAllFields();
 
             Stage stage= (Stage) pane.getScene().getWindow();
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource(""))));
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/Main.fxml"))));
             stage.setResizable(false);
             stage.setTitle("Sign Up");
             stage.centerOnScreen();
+            stage.show();
 
         } else {
             new Alert(Alert.AlertType.ERROR, "Invalid email or password. Please try again.").show();

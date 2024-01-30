@@ -15,6 +15,7 @@ public class BoFactory {
     public <T extends SuperBo>T getBo(BoType type){
         switch (type){
             case USERS:return (T) new UsersBoImpl();
+            case CUSTOMER:return (T) new CustomerBoImpl();
         }
         return null;
     }
