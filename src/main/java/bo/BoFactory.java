@@ -3,9 +3,6 @@ package bo;
 import bo.custom.impl.*;
 import dao.util.BoType;
 
-
-import static com.sun.java.accessibility.util.EventID.ITEM;
-
 public class BoFactory {
     private static BoFactory boFactory;
     private BoFactory(){
