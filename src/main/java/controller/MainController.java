@@ -25,8 +25,9 @@ public class MainController {
     }
 
     @FXML
-    void btnItemsActionPerformed(ActionEvent event) {
-
+    void btnItemsActionPerformed(ActionEvent event) throws IOException {
+        Stage stage=(Stage) pane.getScene().getWindow();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/"))));
     }
 
     @FXML

@@ -146,7 +146,7 @@ public class CustomerFormController {
     void btnUpdateActionPerformed(ActionEvent event) throws SQLException, ClassNotFoundException {
         customerBo.updateCustomer(new CustomerDto(txtID.getText(),txtName.getText(),
                 txtNumber.getText(),txtEmail.getText()));
-
+        loadCustomerTable();
     }
 
     @FXML
