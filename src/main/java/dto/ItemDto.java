@@ -1,17 +1,16 @@
-package entity;
+package dto;
 
-import lombok.*;
+import javafx.fxml.FXML;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
-@Entity
+@Data
 @ToString
-public class Item {
-    @Id
+public class ItemDto {
     private String code;
     private String name;
     private String category;

@@ -1,20 +1,18 @@
-package entity;
+package dto.tm;
 
+import javafx.scene.control.Button;
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-@Entity
 @ToString
-public class Item {
-    @Id
+public class ItemTm {
     private String code;
     private String name;
     private String category;
     private String status;
+    private Button btn;
     private String contact;
 }

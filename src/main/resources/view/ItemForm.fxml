@@ -9,24 +9,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="pane" prefHeight="664.0" prefWidth="1121.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemFormController">
    <children>
-      <TableView layoutX="58.0" layoutY="209.0" prefHeight="380.0" prefWidth="994.0">
+      <TableView fx:id="tblItem" layoutX="58.0" layoutY="209.0" prefHeight="380.0" prefWidth="994.0">
         <columns>
-          <TableColumn prefWidth="151.36388397216797" text="Item Code" />
-          <TableColumn prefWidth="162.1361083984375" text="Product" />
-            <TableColumn minWidth="7.283599853515625" prefWidth="146.27377319335938" text="Catogery" />
-            <TableColumn prefWidth="184.2958984375" text="Status" />
-            <TableColumn prefWidth="159.70416259765625" text="Option" />
-            <TableColumn prefWidth="189.94378662109375" text="Contact" />
+          <TableColumn fx:id="colItemCode" prefWidth="151.36388397216797" text="Item Code" />
+          <TableColumn fx:id="colProduct" prefWidth="162.1361083984375" text="Product" />
+            <TableColumn fx:id="colCatogery" minWidth="7.283599853515625" prefWidth="146.27377319335938" text="Catogery" />
+            <TableColumn fx:id="colStatus" prefWidth="184.2958984375" text="Status" />
+            <TableColumn fx:id="colOption" prefWidth="159.70416259765625" text="Option" />
+            <TableColumn fx:id="colContact" prefWidth="189.94378662109375" text="Contact" />
         </columns>
       </TableView>
       <TextField fx:id="txtItemCode" layoutX="62.0" layoutY="49.0" prefHeight="34.0" prefWidth="169.0" promptText="Item Code" />
       <TextField fx:id="txtProductName" layoutX="272.0" layoutY="49.0" prefHeight="34.0" prefWidth="169.0" promptText="Product Name" />
       <ChoiceBox fx:id="txtCatogery" layoutX="487.0" layoutY="48.0" prefHeight="32.0" prefWidth="161.0" />
       <ChoiceBox fx:id="txtStatus" layoutX="683.0" layoutY="47.0" prefHeight="32.0" prefWidth="161.0" />
-      <TextField fx:id="txtSearch" layoutX="64.0" layoutY="108.0" prefHeight="34.0" prefWidth="169.0" promptText="Search" />
       <TextField fx:id="txtContact" layoutX="879.0" layoutY="47.0" prefHeight="34.0" prefWidth="169.0" promptText="Contact" />
       <Button layoutX="2.0" layoutY="2.0" mnemonicParsing="false" onAction="#btnBackActionPerformed" style="-fx-background-color: yellow;" text="Back" />
       <Button layoutX="840.0" layoutY="606.0" mnemonicParsing="false" onAction="#btnUpdateActionPerformed" prefHeight="34.0" prefWidth="87.0" style="-fx-background-color: blue;" text="Update" textFill="WHITE">

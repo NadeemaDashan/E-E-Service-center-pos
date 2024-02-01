@@ -16,6 +16,7 @@ public class BoFactory {
         switch (type){
             case USERS:return (T) new UsersBoImpl();
             case CUSTOMER:return (T) new CustomerBoImpl();
+            case ITEM:return (T) new ItemBoImpl();
         }
         return null;
     }

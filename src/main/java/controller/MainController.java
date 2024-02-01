@@ -27,7 +27,11 @@ public class MainController {
     @FXML
     void btnItemsActionPerformed(ActionEvent event) throws IOException {
         Stage stage=(Stage) pane.getScene().getWindow();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/"))));
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/ItemForm.fxml"))));
+        stage.centerOnScreen();
+        stage.setResizable(false);
+        stage.setTitle("Items");
+        stage.show();
     }
 
     @FXML
