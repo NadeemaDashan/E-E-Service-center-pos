@@ -1,22 +1,15 @@
 package controller;
 
-import bo.BoFactory;
 import bo.custom.CustomerBo;
 import bo.custom.OrderBo;
-import bo.custom.UsersBo;
 import bo.custom.impl.CustomerBoImpl;
-import bo.custom.impl.UsersBoImpl;
+import bo.custom.impl.OrderBoImpl;
 import dao.custom.ItemDao;
 import dao.custom.impl.ItemDaoImpl;
-import dao.util.BoType;
 import dto.CustomerDto;
-import dto.ItemDto;
-import dto.tm.CustomerTm;
-import dto.tm.ItemTm;
+import dto.OrderDto;
 import dto.tm.OrderTm;
-import entity.Customer;
 import entity.Item;
-import entity.Order;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -25,7 +18,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.control.cell.TreeItemPropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -86,11 +78,12 @@ public class OrderFormController {
     private List<CustomerDto> customers;
     private List<Item> items;
     private ItemDao itemDao = new ItemDaoImpl();
-
+    private final OrderBo orderBo = new OrderBoImpl();
     private final CustomerBo customerBo = new CustomerBoImpl();
     ObservableList<OrderTm> tmList = FXCollections.observableArrayList();
     private int total;
     public OrderFormController() throws SQLException, ClassNotFoundException {
+
     }
 
 
@@ -128,6 +121,7 @@ public class OrderFormController {
                 }
             }
         });
+        lblOrderId.setText("ODR#0001");
     }
 
     private void loadCustomerContact() {
@@ -161,8 +155,10 @@ public class OrderFormController {
     }
 
     @FXML
-    void btnPlaceOrderActionPerformed(ActionEvent event) {
-
+    void btnPlaceOrderActionPerformed(ActionEvent event) throws SQLException, ClassNotFoundException {
+        orderBo.saveOrder(new OrderDto(lblOrderId.getText(),cmbCustomerCode.getValue().toString(),
+                cmbItemCode.getValue().toString(),txtFault.getText(),Integer.parseInt(lblAmount.getText())));
+        new Alert(Alert.AlertType.CONFIRMATION,"Order successfully saved");
     }
     @FXML
     void btnAddToCartActionPerformed(ActionEvent event) {
