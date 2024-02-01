@@ -12,7 +12,7 @@
    <children>
       <ImageView fitHeight="752.0" fitWidth="938.0" layoutX="-16.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../Downloads/istockphoto-584570730-612x612.jpg" />
+            <Image url="@../images/istockphoto-584570730-612x612.jpg" />
          </image>
          <effect>
             <BoxBlur height="8.02" iterations="3" width="8.02" />
