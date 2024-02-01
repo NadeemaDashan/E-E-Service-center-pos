@@ -17,6 +17,7 @@ public class BoFactory {
             case USERS:return (T) new UsersBoImpl();
             case CUSTOMER:return (T) new CustomerBoImpl();
             case ITEM:return (T) new ItemBoImpl();
+            case PLACE_ORDER: return (T) new UsersBoImpl();
         }
         return null;
     }

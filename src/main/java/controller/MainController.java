@@ -40,8 +40,13 @@ public class MainController {
     }
 
     @FXML
-    void btnPlaceOrderActionPerformed(ActionEvent event) {
-
+    void btnPlaceOrderActionPerformed(ActionEvent event) throws IOException {
+        Stage stage=(Stage) pane.getScene().getWindow();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/OrderForm.fxml"))));
+        stage.centerOnScreen();
+        stage.setResizable(false);
+        stage.setTitle("Place Order");
+        stage.show();
     }
 
     @FXML
